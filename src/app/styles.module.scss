@@ -1,0 +1,28 @@
+@import './variables';
+
+@media only screen and (max-width: $small-device-max-width-breakpoint) {
+    main.homepage {
+        background-image: url('./../../public/images/background-home-mobile.jpg');
+    }
+    main.destination {
+        background-image: url('./../../public/images/background-destination-mobile.jpg');
+    }
+}
+
+@media only screen and (min-width: $medium-device-min-width-breakpoint) and (max-width: $medium-device-max-width-breakpoint) {
+    main.homepage {
+        background-image: url('./../../public/images/background-home-tablet.jpg');
+    }
+    main.destination {
+        background-image: url('./../../public/images/background-destination-tablet.jpg');
+    }
+}
+
+@media only screen and (min-width: $large-device-min-width-breakpoint) {
+    main.homepage {
+        background-image: url('./../../public/images/background-home-desktop.jpg');
+    }
+    main.destination {
+        background-image: url('./../../public/images/background-destination-desktop.jpg');
+    }
+}
