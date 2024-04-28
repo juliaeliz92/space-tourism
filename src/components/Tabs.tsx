@@ -1,20 +1,34 @@
 import { barlow_condensed } from "@/app/fonts" 
 
 interface tabsProps {
-    tabs: string[]
+    selectedTab: string,
+    tabs: string[],
+    handleTabSelection: (arg: string) => void
 }
 
 interface tabItemProps {
-    label: string
+    active: boolean,
+    label: string,
+    handleTabSelection: (arg: string) => void
 }
 
-const TabItem: React.FC<tabItemProps> = ({label}) => {
-    return <div className="hover:border-b-2 hover:border-b-white">{label}</div>
+const TabItem: React.FC<tabItemProps> = ({ active, label, handleTabSelection }) => {
+    const selectTab = (label: string) => {
+        handleTabSelection(label)
+    }
+    return <div 
+        className={`border-b-2 ${active ? 'border-b-white' : 'border-b-transparent'} hover:border-b-white`}
+        onClick={() => selectTab(label)}
+    >
+        {label}
+    </div>
 }
 
-const Tabs: React.FC<tabsProps> = ({tabs}) => {
-    return <div className={`text-white uppercase tracking-widest text-base flex gap-4 ${barlow_condensed.className}`}>
-        {tabs.map(((tab, ind) => <TabItem label={tab} key={ind} />))}
+const Tabs: React.FC<tabsProps> = ({ tabs, selectedTab, handleTabSelection }) => {
+    return <div 
+        className={`text-white uppercase tracking-widest text-base flex gap-4 ${barlow_condensed.className}`}
+    >
+        {tabs.map(((tab, ind) => <TabItem active={selectedTab === tab} label={tab} key={ind} handleTabSelection={handleTabSelection}/>))}
     </div>
 }
 
