@@ -4,10 +4,11 @@ import closeIcon from '../../public/images/close-icon.svg'
 import { NavBarItems } from '@/components'
 
 interface SideBarProp {
+    activeItem: string, 
     handleCloseDrawer: () => void
 }
 
-const SideBar: React.FC<SideBarProp> = ({ handleCloseDrawer }) => {
+const SideBar: React.FC<SideBarProp> = ({ handleCloseDrawer, activeItem }) => {
     return <div className="drawer-side text-white">
         <label htmlFor="my-drawer-3" aria-label="close sidebar"></label>
         <ul className="menu px-8 py-10 w-80 min-h-full backdrop-blur">
@@ -15,7 +16,7 @@ const SideBar: React.FC<SideBarProp> = ({ handleCloseDrawer }) => {
             <div className='flex w-full justify-end pb-10'>
                 <Image src={closeIcon} alt='close sidebar' className='hover:cursor-pointer' onClick={() => handleCloseDrawer()}/>
             </div>
-            <NavBarItems/>
+            <NavBarItems activeItem={activeItem} />
         </ul>
     </div>
 }

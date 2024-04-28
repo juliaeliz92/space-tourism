@@ -6,22 +6,27 @@ const NAVBAR_OPTIONS: { link: string, label: string } [] = [
     {link: '/crew', label: 'crew'}, 
     {link: '/technology', label: 'technology'}]
 
-interface NavBarItemProp {
+interface NavBarItemProps {
     label: string,
     link: string,
-    ind: number
+    ind: number,
+    active: boolean
 }
 
-const NavBarItem: React.FC<NavBarItemProp> = ({ label, link, ind }) => {
+interface NavBarItemsProps {
+    activeItem: string
+}
+
+const NavBarItem: React.FC<NavBarItemProps> = ({ label, link, ind, active }) => {
     return <li 
-        className={`uppercase text-white text-base md:text-sm py-2 md:mx-6 md:py-8 tracking-widest border-b-0 md:border-b-2 lg:border-b-transparent md:border-b-[#263232] hover:border-b-white hover:cursor-pointer ${barlow_condensed.className}`}>
+        className={`uppercase text-white text-base md:text-sm py-2 md:mx-6 md:py-8 tracking-wides border-b-2 ${active ? 'border-b-white' : 'border-b-transparent md:border-b-[#263232] lg:border-b-transparent'} hover:border-b-white hover:cursor-pointer ${barlow_condensed.className}`}>
         <span><b className='md:hidden lg:inline-block'>{`0${ind}`}</b> <a href={link}>{label}</a></span>
     </li>
 }
 
-const NavBarItems = () => {
+const NavBarItems: React.FC<NavBarItemsProps> = ({ activeItem }) => {
     return <>
-        {NAVBAR_OPTIONS.map(({ link, label }, ind) => (<NavBarItem key={ind} label={label} link={link} ind={ind}/>))}
+        {NAVBAR_OPTIONS.map(({ link, label }, ind) => (<NavBarItem key={ind} label={label} link={link} ind={ind} active={activeItem === label}/>))}
     </>
 }
 

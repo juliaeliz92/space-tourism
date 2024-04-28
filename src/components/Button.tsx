@@ -1,6 +1,5 @@
 import { bellefair } from '@/app/fonts';
 
-
 export default function Button() {
 
     return <div className='h-52 w-52 md:w-72 md:h-72 lg:w-96 lg:h-96 flex justify-center items-center'>
