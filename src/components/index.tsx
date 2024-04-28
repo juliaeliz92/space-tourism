@@ -8,5 +8,8 @@ import Tabs from './Tabs';
 import Title from './Title';
 import SubHeading from './SubHeading';
 import SubContent from './SubContent';
+import Stepper from './Stepper';
+import Heading from './Heading';
+import Paragraph from './Paragraph';
 
-export { NavBar, Layout, Button, SideBar, NavBarItems, Subtitle, Tabs, Title, SubHeading, SubContent }
+export { NavBar, Layout, Button, SideBar, NavBarItems, Subtitle, Tabs, Title, SubHeading, SubContent, Stepper, Heading, Paragraph }

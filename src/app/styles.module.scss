@@ -7,6 +7,9 @@
     main.destination {
         background-image: url('./../../public/images/background-destination-mobile.jpg');
     }
+    main.crew {
+        background-image: url('./../../public/images/background-crew-mobile.jpg');
+    }
 }
 
 @media only screen and (min-width: $medium-device-min-width-breakpoint) and (max-width: $medium-device-max-width-breakpoint) {
@@ -16,6 +19,9 @@
     main.destination {
         background-image: url('./../../public/images/background-destination-tablet.jpg');
     }
+    main.crew {
+        background-image: url('./../../public/images/background-crew-tablet.jpg');
+    }
 }
 
 @media only screen and (min-width: $large-device-min-width-breakpoint) {
@@ -24,5 +30,8 @@
     }
     main.destination {
         background-image: url('./../../public/images/background-destination-desktop.jpg');
+    }
+    main.crew {
+        background-image: url('./../../public/images/background-crew-desktop.jpg');
     }
 }

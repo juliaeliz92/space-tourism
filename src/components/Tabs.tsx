@@ -17,7 +17,7 @@ const TabItem: React.FC<tabItemProps> = ({ active, label, handleTabSelection }) 
         handleTabSelection(label)
     }
     return <div 
-        className={`border-b-2 ${active ? 'border-b-white' : 'border-b-transparent'} hover:border-b-white`}
+        className={`border-b-2 ${active ? 'border-b-white text-white' : 'border-b-transparent text-[#D0D6F9]'} hover:cursor-pointer hover:border-b-[#979797] hover:border-b-white`}
         onClick={() => selectTab(label)}
     >
         {label}

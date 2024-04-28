@@ -18,9 +18,12 @@ export default function Layout({ children } : Props): ReactElement<Props> {
     } else if(pathname === '/destination') {
         style = styles.destination
         active = 'destination'
+    } else if(pathname === '/crew') {
+        style = styles.crew
+        active = 'crew'
     }
     return (
-        <main className={`flex flex-col h-screen bg-cover drawer drawer-end ${style}`}>
+        <main className={`flex flex-col h-screen overflow-y-auto bg-cover bg-fixed drawer drawer-end scroll-auto ${style}`}>
             <input id="my-drawer-3" type="checkbox" className="drawer-toggle" checked={openDrawer} defaultChecked /> 
             <div className='drawer-content h-full flex flex-col'>
                 <NavBar handleOpenDrawer={() => setOpenDrawer(true)} activeItem={active} />
