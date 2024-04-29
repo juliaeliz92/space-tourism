@@ -21,6 +21,9 @@ export default function Layout({ children } : Props): ReactElement<Props> {
     } else if(pathname === '/crew') {
         style = styles.crew
         active = 'crew'
+    } else if (pathname === '/technology') {
+        style = styles.technology
+        active = 'technology'
     }
     return (
         <main className={`flex flex-col h-screen overflow-y-auto bg-cover bg-fixed drawer drawer-end scroll-auto ${style}`}>

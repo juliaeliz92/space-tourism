@@ -11,5 +11,6 @@ import SubContent from './SubContent';
 import Stepper from './Stepper';
 import Heading from './Heading';
 import Paragraph from './Paragraph';
+import StepperLarge from './StepperLarge';
 
-export { NavBar, Layout, Button, SideBar, NavBarItems, Subtitle, Tabs, Title, SubHeading, SubContent, Stepper, Heading, Paragraph }
+export { NavBar, Layout, Button, SideBar, NavBarItems, Subtitle, Tabs, Title, SubHeading, SubContent, Stepper, Heading, Paragraph, StepperLarge }

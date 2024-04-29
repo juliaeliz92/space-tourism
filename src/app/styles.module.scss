@@ -10,6 +10,9 @@
     main.crew {
         background-image: url('./../../public/images/background-crew-mobile.jpg');
     }
+    main.technology {
+        background-image: url('./../../public/images/background-technology-mobile.jpg');
+    }
 }
 
 @media only screen and (min-width: $medium-device-min-width-breakpoint) and (max-width: $medium-device-max-width-breakpoint) {
@@ -22,6 +25,9 @@
     main.crew {
         background-image: url('./../../public/images/background-crew-tablet.jpg');
     }
+    main.technology {
+        background-image: url('./../../public/images/background-technology-tablet.jpg');
+    }
 }
 
 @media only screen and (min-width: $large-device-min-width-breakpoint) {
@@ -33,5 +39,8 @@
     }
     main.crew {
         background-image: url('./../../public/images/background-crew-desktop.jpg');
+    }
+    main.technology {
+        background-image: url('./../../public/images/background-technology-desktop.jpg');
     }
 }
