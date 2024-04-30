@@ -32,9 +32,15 @@ Page.getLayout = function getLayout(page: ReactElement) {
                 <title>Space Travel</title>
                 <meta
                     name="description"
-                    content="Cool info on Space Travel"
+                    content="Cool website using Next.js on Space Travel, the technology used and the amazing crew"
                 />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta property="og:title" content="Space Travel" />
+                <meta property="og:image" content="https://i.ibb.co/jv0YDFs/space-travel.png"/>
+                <meta property="og:description" content="Cool website using Next.js on Space Travel, the technology used and the amazing crew"/>
+                <meta property="og:url" content="https://space-tourism-2g2rqwywv-julia-pauls-projects.vercel.app" />
+                <meta property="og:image:width" content="1918" />
+                <meta property="og:image:height" content="824" />
                 <link rel="icon" href="/images/icon.ico" />
             </Head>
             <Layout>
