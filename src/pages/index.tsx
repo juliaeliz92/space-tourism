@@ -41,6 +41,7 @@ Page.getLayout = function getLayout(page: ReactElement) {
                 <meta property="og:url" content="https://space-tourism-lyart-one.vercel.app/" />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="627" />
+                <meta property="og:author" content="Julia Paul" />
                 <link rel="icon" href="/images/icon.ico" />
             </Head>
             <Layout>
